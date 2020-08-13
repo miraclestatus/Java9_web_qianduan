@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        /*1. 变化样式 有大小  一行显示  我们想到了 行内块元素*/
+        a {
+            /*一定要进行模式转换 行内块*/
+            display: inline-block;
+            width: 100px;
+            height: 30px;
+            background-color: pink;
+            /*可以让文字水平居中*/
+            text-align: center;
+            color: #fff;
+            text-decoration: none;
+        }
+        /*2. 鼠标经过 变化底色 和 文字的颜色*/
+        a:hover {
+            background-color: orange;
+            color: yellow;
+        }
+    </style>
+</head>
+<body>
+<a href="#">新闻</a>
+<a href="#">体育</a>
+<a href="#">汽车</a>
+<a href="#">好用</a>
+</body>
+</html>

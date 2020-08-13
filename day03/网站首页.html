@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        .nav {
+            /*让里面的6个链接 居中对齐水平  这句话对 行内元素 行内块元素都有效果的*/
+            text-align: center;
+        }
+        .nav a {
+            /*有大小的 因为a 是行内元素 不能直接设置宽度和高 必须要转换 行内块元素*/
+            display: inline-block;
+            width: 120px;
+            height: 50px;
+            /*行高等于盒子的高度 就可以让单行文本垂直居中*/
+            line-height: 50px;
+            color: #fff;
+            /*background-color: pink;*/
+            text-decoration: none;
+            /*背景简写*/
+            background: url(../imgs/bg.png) no-repeat;
+        }
+        /*鼠标经过nav里面的链接， 背景图片更换一下就好了*/
+        .nav a:hover {
+            background-image: url(../imgs/bgc.png);
+        }
+    </style>
+</head>
+<body>
+<div class="nav">
+    <a href="#">网站首页</a>
+    <a href="#">网站首页</a>
+    <a href="#">网站首页</a>
+    <a href="#">网站首页</a>
+    <a href="#">网站首页</a>
+    <a href="#">网站首页</a>
+</div>
+<a href="#">123</a>
+</body>
+</html>
