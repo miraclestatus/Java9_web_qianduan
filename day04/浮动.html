@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        /*大多数布局是不方便给父级高度，通常是盒子有多少内容，*/
+        /*就显示多少内容， 也就是自动撑开父亲盒子*/
+        .one{
+            width: 300px;
+            background-color: deeppink;
+        }
+        .one-da{
+            width: 100px;
+            height: 100px;
+            background-color: purple;
+        }
+        .one-xiao{
+            width: 130px;
+            height: 130px;
+            background-color: skyblue;
+        }
+
+        .two{
+            width: 500px;
+            height: 130px;
+            background-color: black;
+        }
+    </style>
+</head>
+<body>
+<div class="one">
+    <div class="one-da"></div>
+    <div class="one-xiao"></div>
+</div>
+<div class="two"></div>
+</body>
+</html>
