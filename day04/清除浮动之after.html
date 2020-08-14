@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        .clearfix:after{
+            content: "";
+            display: block;
+            height: 0;
+            visibility: hidden;
+            clear: both;
+        }
+        .one{
+            width: 300px;
+            background-color: red;
+        }
+
+        /*.one-da .one-xiao浮动了，不占有位置， 而且父没有高度*/
+        /*two会到顶上去了*/
+        .one-da{
+            float: left;
+            width: 100px;
+            height: 100px;
+            background-color: blue;
+        }
+        .one-xiao{
+            float: left;
+
+            width: 130px;
+            height: 130px;
+            background-color: skyblue;
+        }
+
+        .two{
+            width: 500px;
+            height: 130px;
+            background-color: black;
+        }
+
+
+
+    </style>
+</head>
+<body>
+<div class="one clearfix">
+    <div class="one-da"></div>
+    <div class="one-xiao"></div>
+</div>
+<div class="two"></div>
+
+</body>
+</html>
