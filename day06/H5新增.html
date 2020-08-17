@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div class="box">盒子1</div>
+<div class="box">盒子2</div>
+<div id="nav">
+    <ul>
+        <li>首页</li>
+        <li>产品</li>
+    </ul>
+</div>
+<script>
+    //  1、getElementsByClassName根据类名获取某些元素集合
+    var boxs =  document.getElementsByClassName('box')
+    console.log(boxs)
+    // 2、 返回第一个
+    var nav = document.querySelector('#nav')
+    var li = document.querySelector('li')
+    // 3、 querySelectorAll 返回指定选择器所有
+    var allBox = document.querySelectorAll('.box')
+    var lis = document.querySelectorAll('li')
+
+</script>
+</body>
+</html>
