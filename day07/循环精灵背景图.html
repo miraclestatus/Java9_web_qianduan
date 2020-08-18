@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        * {
+          margin: 0;
+          padding: 0;
+        }
+        li {
+            list-style-type: none;
+        }
+        .box{
+            width: 250px;
+            margin: 100px auto;
+        }
+        .box li{
+            float: left;
+            width: 24px;
+            height: 24px;
+            background-color: skyblue;
+            margin: 15px;
+            background: url(../imgs/sprite.png) no-repeat;
+        }
+
+
+
+    </style>
+</head>
+<body>
+<div class="box">
+    <ul>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+
+    </ul>
+</div>
+<script>
+    // 获取网页中所有的li元素
+    var lis = document.querySelectorAll('li')
+    for (var i = 0; i < lis.length ; i++) {
+        var y = i*44
+        console.log(y)
+        lis[i].style.backgroundPosition = '0 -' + y + 'px';
+    }
+
+</script>
+</body>
+</html>

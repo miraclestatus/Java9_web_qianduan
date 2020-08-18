@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        div{
+            width: 100px;
+            height: 100px;
+            background-color: red;
+        }
+        .change {
+            background-color: blue;
+            color: #fff;
+            font-size: 25px;
+            margin-top: 100px;
+        }
+        .first{
+
+        }
+
+    </style>
+</head>
+<body>
+<div class="first">文本</div>
+<script>
+    var test =  document.querySelector('div')
+    test.onclick = function () {
+        // this.style.backgroundColor = 'blue';
+        // this.style.color = '#fff';
+        // this.style.fontSize = '25px';
+        // this.style.marginTop = '100px';]
+        // 将 change样式塞入  <div class="first">文本</div>中
+        // 修改修改 className 更改样式
+        this.className = 'first change';
+    }
+</script>
+</body>
+</html>
