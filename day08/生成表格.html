@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        table {
+            width: 600px;
+            cursor: pointer;
+        }
+
+        table td {
+            text-align: center;
+        }
+
+        table th {
+            background-color: blueviolet;
+        }
+
+        table tr {
+            background-color: pink;
+        }
+    </style>
+</head>
+<body>
+<div id="dv">
+    请输入姓名:
+    <input type="text" value="" id="uname"/>
+    <br/> 请输入邮箱:
+    <input type="text" value="" id="email"/>
+</div>
+
+<input type="button" value="添加" id="btn"/>
+<table border="1" cellpadding="0" cellspacing="0" id="tb">
+    <thead>
+    <tr>
+        <th>姓名</th>
+        <th>邮箱</th>
+    </tr>
+    </thead>
+    <tbody id="tbd">
+    <tr>
+        <td>小黑</td>
+        <td>xiaohei@126.com</td>
+    </tr>
+    <tr>
+        <td>小黑2</td>
+        <td>xiaohei@126.com</td>
+    </tr>
+    </tbody>
+</table>
+<script>
+    var btn = document.getElementById('btn')
+    btn.onclick = function () {
+        // console.log('haha')
+        // 获取文本框的内容
+        var uname = document.getElementById('uname')
+        var email = document.getElementById('email')
+        if (uname.value == '' || email.value == '') {
+            alert('信息不完整')
+            return false;
+        }
+
+        // 创建列
+        var td1 = document.createElement('td')
+        td1.innerHTML = uname.value
+        var td2 = document.createElement('td')
+        td2.innerHTML = email.value
+
+        //，把列添加到行中
+        var trObj = document.createElement('tr')
+
+        trObj.appendChild(td1)
+        trObj.appendChild(td2)
+
+        var tbd = document.getElementById('tbd')
+        // 把行添加到 tbody
+        tbd.appendChild(trObj)
+
+
+
+    }
+
+</script>
+</body>
+</html>

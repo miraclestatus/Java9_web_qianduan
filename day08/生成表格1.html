@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        table {
+            width: 600px;
+            cursor: pointer;
+        }
+
+        table td {
+            text-align: center;
+        }
+
+        table th {
+            background-color: blueviolet;
+        }
+
+        table tr {
+            background-color: pink;
+        }
+    </style>
+</head>
+<body>
+<div id="dv">
+    请输入姓名:
+    <input type="text" value="" id="uname"/>
+    <br/> 请输入邮箱:
+    <input type="text" value="" id="email"/>
+</div>
+
+<input type="button" value="添加" id="btn"/>
+<table border="1" cellpadding="0" cellspacing="0" id="tb">
+    <thead>
+    <tr>
+        <th>姓名</th>
+        <th>邮箱</th>
+    </tr>
+    </thead>
+    <tbody id="tbd">
+    <tr>
+        <td>小黑</td>
+        <td>xiaohei@126.com</td>
+    </tr>
+    <tr>
+        <td>小黑2</td>
+        <td>xiaohei@126.com</td>
+    </tr>
+    </tbody>
+</table>
+<script>
+    // var div = document.getElementById('div');
+    var btn = document.getElementById('btn');
+    // var tb = document.getElementById('tb');
+    var tbd = document.getElementById('tbd');
+    var text1 = document.getElementById('uname')
+    var text2 = document.getElementById('email')
+    // var tr = document.querySelectorAll('tr')
+    btn.onclick = function () {
+        if (text1.value =='' || text2.value == '') {
+            alert('请将姓名和邮箱输入完整');
+            return false;
+        }else {
+            var td1 = document.createElement('td');
+            var td2 = document.createElement('td');
+            td1.innerHTML = text1.value;
+            td2.innerHTML = text2.value;
+
+            // tb.appendChild(td1,tr.children)
+            // tb.appendChild(td2,tr.children)
+            var trobj = document.createElement('tr');
+            trobj.appendChild(td1)
+            trobj.appendChild(td2)
+            tbd.appendChild(trobj)
+        }
+
+    }
+</script>
+</body>
+</html>

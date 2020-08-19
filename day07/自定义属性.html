@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div id="demo" index = "1" class="nav"> </div>
+<script>
+    var div = document.querySelector('div');
+    console.log(div.id) // demo
+    console.log(div.getAttribute('id')) //demo
+    console.log(div.getAttribute('index')) //1  自定义
+    console.log('++++++++++++++++++++++++++++++++++++++++')
+    div.id = 'test'
+    console.log(div.id)
+    div.className = 'navs';
+    console.log(div.className)
+
+    div.setAttribute('index', 2);
+    console.log(div.getAttribute('index')) //2 自定义
+    div.setAttribute('class', 'footer') // footer
+    // class 特殊
+    console.log(div.className)
+    // 移除属性
+    div.removeAttribute('index')
+    console.log(div.getAttribute('index')) // null
+</script>
+</body>
+</html>

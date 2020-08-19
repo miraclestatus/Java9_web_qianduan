@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div getTime = "20" data-index = "2" data-list-name="eric"></div>
+<script>
+    var div = document.querySelector('div')
+    console.log(div.getAttribute('getTime'))
+    div.setAttribute('data-time', 20)
+
+    console.log(div.getAttribute('data-index'))
+    console.log(div.getAttribute('data-list-name'))
+    //  h5新增
+    // dataset 是一个集合存放了所有以data开头的自定义属性
+    console.log(div.dataset)
+    // 访问map
+    console.log(div.dataset.index)
+    console.log(div.dataset['index'])
+
+    console.log(div.dataset.listName)
+    console.log(div.dataset['listName'])
+
+
+
+</script>
+</body>
+</html>

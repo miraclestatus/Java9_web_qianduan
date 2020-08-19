@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            padding: 100px;
+        }
+
+        textarea {
+            width: 200px;
+            height: 100px;
+            border: 1px solid pink;
+            outline: none;
+            resize: none;
+        }
+
+        ul {
+            margin-top: 50px;
+        }
+
+        li {
+            width: 300px;
+            padding: 5px;
+            background-color: rgb(245, 209, 243);
+            color: red;
+            font-size: 14px;
+            margin: 15px 0;
+        }
+    </style>
+</head>
+<body>
+<textarea name="" id=""></textarea>
+<button>发布</button>
+<ul></ul>
+<script>
+    // 获取元素
+    var btn = document.querySelector('button')
+    var text = document.querySelector('textarea')
+    var ul = document.querySelector('ul')
+    // 注册事件
+    btn.onclick =function () {
+       // console.log( text.value)
+        if (text.value == ''){
+            alert('您啥也没写就发布？')
+            return false;
+        }else {
+            // 创建 li
+            var li = document.createElement('li')
+            // console.log( text.value)
+            // 先有 li 才能赋值
+            li.innerHTML = text.value
+            // 添加元素
+            // ul.appendChild(li)
+            ul.insertBefore(li, ul.children[0])
+        }
+    }
+</script>
+</body>
+</html>

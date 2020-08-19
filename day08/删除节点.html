@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<button>删除</button>
+<ul>
+    <li>熊大</li>
+    <li>熊二</li>
+    <li>光头强</li></ul>
+<script>
+    var ul = document.querySelector('ul')
+    var btn = document.querySelector('button')
+    btn.onclick = function () {
+       if (ul.children.length == 0){
+            // alert('还删呐')
+           this.disabled = true;
+       }else {
+           ul.removeChild(ul.children[0])
+       }
+    }
+</script>
+</body>
+</html>

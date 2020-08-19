@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<ol>
+    <li>我是li1</li>
+    <li>我是li2</li>
+    <li>我是li3</li>
+    <li>我是li4</li>
+    <li>我是li5</li>
+</ol>
+<script>
+   var ol =  document.querySelector('ol')
+    console.log(ol.firstChild)
+    console.log(ol.lastChild)
+    console.log(ol.firstElementChild)
+    console.log(ol.lastElementChild)
+    // 既兼容 有方便 实际开发
+    console.log(ol.children[0])
+    console.log(ol.children[ol.children.length-1])
+</script>
+</body>
+</html>

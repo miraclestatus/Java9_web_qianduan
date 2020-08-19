@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        li {
+            list-style-type: none;
+        }
+
+        .tab {
+            width: 978px;
+            margin: 100px auto;
+        }
+
+        .tab_list {
+            height: 39px;
+            border: 1px solid #ccc;
+            background-color: #f1f1f1;
+        }
+
+        .tab_list li {
+            float: left;
+            height: 39px;
+            line-height: 39px;
+            padding: 0 20px;
+            text-align: center;
+            cursor: pointer;
+        }
+
+        .tab_list .current {
+            background-color: #c81623;
+            color: #fff;
+        }
+
+        .item_info {
+            padding: 20px 0 0 20px;
+        }
+        .item{
+            display: none;
+        }
+    </style>
+</head>
+<body>
+<div class="tab">
+    <div class="tab_list">
+        <ul>
+            <li class="current">商品介绍</li>
+            <li >规格与包装</li>
+            <li>售后保障</li>
+            <li>商品评价（50000）</li>
+            <li>手机社区</li>
+        </ul>
+    </div>
+    <div class="tab_con">
+        <div class="item" style="display: block;">
+            <div class="p-parameter">
+                <ul id="parameter-brand" class="p-parameter-list">
+                    <li title="诗洛儿">品牌： <a href="//list.jd.com/list.html?cat=1320,1581,2670&amp;ev=exbrand_112252" clstag="shangpin|keycount|product|pinpai_2" target="_blank">诗洛儿</a>
+                        <!--a href="#none" class="follow-brand btn-def" clstag='shangpin|keycount|product|guanzhupinpai'><b>&hearts;</b>关注 -->
+                    </li>
+                </ul>
+                <ul class="parameter2 p-parameter-list">
+                    <li title="德芙巧克力礼盒装 圣诞节糖果创意礼品生日礼物送女友送闺蜜情人节礼物">商品名称：德芙巧克力礼盒装 圣诞节糖果创意礼品生日礼物送女友送闺蜜情人节礼物</li>
+                    <li title="51616951519">商品编号：51616951519</li>
+                    <li title="中国特产·扬州馆">店铺： <a href="//yangzhou.jd.com" target="_blank">中国特产·扬州馆</a></li>
+                    <li title="300.00g">商品毛重：300.00g</li>
+                    <li title="其它">特殊属性：其它</li>
+                    <li title="原味">口味：原味</li>
+                    <li title="糖果">分类：糖果</li>
+                </ul>
+                <p class="more-par">
+                    <a href="#product-detail" class="J-more-param">更多参数<s class="txt-arr">&gt;&gt;</s></a>
+                </p>
+            </div>
+        </div>
+        <div class="item">
+            规格与包装模块内容
+        </div>
+        <div class="item">
+            售后保障模块内容
+        </div>
+        <div class="item">
+            商品评价（50000）模块内容
+        </div>
+        <div class="item">
+            手机社区模块内容
+        </div>
+
+    </div>
+</div>
+<script>
+    var tab_list = document.querySelector('.tab_list');
+    var lis = document.querySelectorAll('li');
+    var items = document.querySelectorAll('.item');
+
+    // for 循环绑定点击事件
+    for (var i = 0; i < lis.length; i++) {
+        lis[i].setAttribute('index', i);
+        lis[i].onclick =  function () {
+            // 排他思想 干掉所有人
+            for (var j = 0; j < lis.length ; j++) {
+                lis[j].className = '';
+            }
+            // 保留自己
+            this.className = 'current';
+            // 显示对应模块的内容
+            var index = this.getAttribute('index')
+            console.log(index)
+
+            // 排他思想 干掉所有人
+            for (var j = 0; j <items.length ; j++) {
+                items[j].style.display = 'none';
+            }
+            // 保留自己
+
+            items[index].style.display = 'block';
+
+        }
+    }
+
+</script>
+</body>
+</html>
