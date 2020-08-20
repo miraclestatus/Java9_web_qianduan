@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        .father {
+            overflow: hidden;
+            width: 300px;
+            height: 300px;
+            margin: 100px auto;
+            background-color: pink;
+            text-align: center;
+        }
+
+        .son {
+            width: 200px;
+            height: 200px;
+            margin: 50px;
+            background-color: blue;
+            line-height: 200px;
+            color: #fff;
+        }
+    </style>
+</head>
+<body>
+<div class="father">
+    <div class="son">son盒子</div>
+</div>
+<script>
+    // dom 事件流三个阶段
+    // 1. js只能执行捕获或者冒泡其中的一个
+    // 2、 onclick 只有冒泡
+    // addEventListener(type, func, bool)
+    // 第三个参数 是true 处于捕获阶段
+    // document -> html -> body -> father -> son
+
+    // var son = document.querySelector('.son')
+    // son.addEventListener('click', function () {
+    //     alert('son')
+    // }, true)
+    // var father = document.querySelector('.father')
+    // father.addEventListener('click', function () {
+    //     alert('father')
+    // }, true)
+    //
+    // document.addEventListener('click', function () {
+    //     alert('document')
+    // },true)
+    //
+    // 冒泡阶段 第三个参数 是false或者不写 处于冒泡阶段
+    // son -> father -> body -> html -> document
+    var son = document.querySelector('.son')
+    son.addEventListener('click', function () {
+        alert('son')
+    }, false)
+    var father = document.querySelector('.father')
+    father.addEventListener('click', function () {
+        alert('father')
+    }, false)
+
+    document.addEventListener('click', function () {
+        alert('document')
+    },false)
+
+
+
+
+</script>
+
+
+
+
+</body>
+</html>

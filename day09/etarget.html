@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        div{
+            width: 100px;
+            height: 100px;
+            background-color: blue;
+        }
+    </style>
+</head>
+<body>
+<div>123</div>
+<ul>
+    <li>1</li>
+    <li>2</li>
+    <li>3</li>
+</ul>
+<script>
+    var div = document.querySelector('div')
+
+    div.addEventListener('click', function (e) {
+        // 没区别
+        console.log(e.target);
+        console.log('+++++++++++++++');
+        console.log(this)
+    })
+    var ul = document.querySelector('ul')
+    ul.addEventListener('click', function (e) {
+        // 绑定ul 指定的是ul
+        console.log(this)
+        console.log('+++++++++++++++');
+        console.log(e.currentTarget)
+        console.log('+++++++++++++++');
+        // 谁触发了那个事件，  e.target就指向谁
+        console.log(e.target);
+
+    })
+
+</script>
+</body>
+</html>

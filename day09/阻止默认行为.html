@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div>123</div>
+<a href="http://www.baidu.com">百度</a>
+<form action="http://www.baidu.com">
+    <input type="submit" value="提交" name="sub">
+</form>
+<script>
+    var div = document.querySelector('div')
+    div.addEventListener('click', fn)
+    div.addEventListener('mouseover', fn)
+    div.addEventListener('mouseout', fn)
+
+    function fn(e) {
+        console.log(e.type);
+    }
+    // 阻止a 链接跳转
+    var a = document.querySelector('a')
+    // a.addEventListener('click', function (e) {
+    //     e.preventDefault() // 标准阻止写法
+    // })
+    a.onclick =  function (e) {
+        // e.preventDefault()
+        //  return false 只有 在传统注册时候才能生效
+        return false;
+
+    }
+
+</script>
+</body>
+</html>

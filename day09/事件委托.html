@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<ul>
+    <li>点我点我快点我！</li>
+    <li>点我点我快点我！</li>
+    <li>点我点我快点我！</li>
+    <li>点我点我快点我！</li>
+    <li>点我点我快点我！</li>
+</ul>
+<script>
+    var ul = document.querySelector('ul')
+    // 事件委托的原理, 给父节点添加侦听器，
+    // 利用事件冒泡去影响每一个子节点
+    ul.addEventListener('click', function (e) {
+        // alert('点了点了')
+        // e.target 可以得到我们点击的对象
+        e.target.style.backgroundColor = 'blue';
+    })
+
+    // 给父元素注册事件，利用事件冒泡，当子元素的事件触发，会冒泡到父元素，
+    // 然后去控制相应的子元素。
+</script>
+</body>
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        div{
+            width: 100px;
+            height: 100px;
+            background-color: blue;
+        }
+    </style>
+</head>
+<body>
+<div>1</div>
+<div>2</div>
+<div>3</div>
+<script>
+   var divs = document.querySelectorAll('div')
+    divs[0].onclick = function () {
+        alert('哈哈')
+        // 传统删除事件的方式
+        this.onclick = null;
+    }
+    divs[1].addEventListener('click', fn) // 传函数名，不是调用
+    function fn() {
+        alert('haha')
+        this.removeEventListener('click', fn)
+    }
+</script>
+</body>
+</html>

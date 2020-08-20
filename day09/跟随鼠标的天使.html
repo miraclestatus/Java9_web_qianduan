@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        img{
+            position: absolute;
+            top: 2px;
+        }
+        body{
+            height: 3000px;
+        }
+    </style>
+</head>
+<body>
+<img src="../imgs/angel.gif" alt="">
+<script>
+    var pic = document.querySelector('img')
+    document.addEventListener('mousemove', function (e) {
+        // console.log(1)
+        var x = e.pageX;
+        var y = e.pageY;
+        console.log('x坐标的值是'+ x + 'y坐标是' + y)
+        pic.style.left = x - 40 + 'px';
+        pic.style.top = y - 30 + 'px'
+    })
+</script>
+</body>
+</html>
