@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<button class="begin">开启定时</button>
+<button class="stop">关闭定时</button>
+<script>
+    var begin = document.querySelector('.begin')
+    var stop = document.querySelector('.stop')
+    var time = null;
+    begin.addEventListener('click', function () {
+        time = setInterval(function () {
+            console.log('你最帅')
+        },500)
+    })
+    stop.addEventListener('click', function () {
+      clearInterval(time)
+    })
+</script>
+</body>
+</html>

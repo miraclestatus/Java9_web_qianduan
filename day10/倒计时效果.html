@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        div {
+            margin: 200px;
+        }
+
+        span {
+            display: inline-block;
+            width: 40px;
+            height: 40px;
+            background-color: #333;
+            font-size: 20px;
+            color: #fff;
+            text-align: center;
+            line-height: 40px;
+        }
+    </style>
+</head>
+<body>
+<div>
+    <span class="hour">1</span>
+    <span class="minute">2</span>
+    <span class="second">3</span>
+</div>
+
+<script>
+    // 获取元素
+    var hour  = document.querySelector('.hour')
+    var minute  = document.querySelector('.minute')
+    var second  = document.querySelector('.second')
+    var inputTime = +new Date('2020-08-21 18:00:00');
+    countDown()// 先调用一次，防止第一加载有空白
+    // 开启定时器器
+    setInterval(countDown, 1000)
+    function countDown() {
+        var nowTime = +new Date();
+        var times = (inputTime - nowTime)/1000  // 总秒数
+        // console.log(times)
+        var h = parseInt(times/60/60%24) // 小时
+        h = h < 10? '0'+h : h;
+        hour.innerHTML = h;
+        var m = parseInt(times/60%60) // 小时
+        m = m < 10? '0'+m : m;
+        minute.innerHTML = m;
+        var s = parseInt(times%60) // 小时
+        s = s < 10? '0'+s : s;
+        second.innerHTML = s;
+
+    }
+
+
+
+</script>
+</body>
+</html>

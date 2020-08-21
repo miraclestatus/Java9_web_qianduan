@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<input type="text">
+<script>
+    var search = document.querySelector('input')
+    document.addEventListener('keyup', function (e) {
+        console.log(e.keyCode)
+        if(e.keyCode === 83){
+            search.focus();
+        }
+    })
+</script>
+</body>
+</html>

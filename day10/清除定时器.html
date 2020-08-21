@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+
+<body>
+<button>点击停止炸弹</button>
+<script>
+    function callback() {
+        alert('来颗华子')
+    }
+    var timer = setTimeout(callback, 5000)
+    document.querySelector('button').addEventListener('click', function () {
+        // 清除定时器
+        clearTimeout(timer)
+    })
+
+</script>
+</body>
+</html>
