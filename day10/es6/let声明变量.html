@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let a = 10;
+    console.log(a)
+    if (true){
+        let b = 20;
+        console.log(b)
+    }
+    // console.log(b) //  b is not defined
+
+
+    if (true){
+        var c = 100;
+        console.log(c)
+    }
+    console.log("c"+ c)
+    // 在一个大括号中 使用let声明的变量才具有块级作用域
+    // var 不具备这个特点
+    // 为了防止循环变量称为全局变量可以使用 let声明变量
+    for (let i = 0; i < 2; i++) {
+        console.log(i)
+    }
+    // 使用 let声明的变量具有暂时性死区特性，
+    // 该变量会绑定在块级作用域， 不受外界的影响
+    var tmp = 123;
+    if (true){
+        console.log(tmp)
+        let  tmp = 'abc';
+
+
+    }
+
+</script>
+</body>
+</html>

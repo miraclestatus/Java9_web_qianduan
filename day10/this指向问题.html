@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<button>点击</button>
+<script>
+    // this 一般情况下this指向的是调用那个对象
+    console.log(this)  // window
+    // 全局作用域或者普通函数中this指向全局对象window
+    function fn() {
+        console.log(this)
+    }
+    window.fn()
+    window.setTimeout(function () {
+        console.log(this)
+    }, 1000)
+    2. 方法调用中谁调用this就指向谁
+    var o = {
+        sayHi: function () {
+            console.log(this)
+        }
+    }
+    o.sayHi();
+    var btn = document.querySelector('button')
+    // btn.onclick = function () {
+    //     console.log(this)// 指向btn
+    // }
+    btn.addEventListener('click', function () {
+        console.log(this)// 指向btn
+    })
+
+    // 构造函数
+    function Fun() {
+       console.log(this) // 指向f实例对象
+    }
+    var f = new Fun();
+</script>
+</body>
+</html>
